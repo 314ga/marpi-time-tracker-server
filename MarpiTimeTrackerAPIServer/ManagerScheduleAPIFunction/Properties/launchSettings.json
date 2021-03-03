@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ManagerScheduleAPIFunction": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "jdbc_scheduleDB_connection": "Data Source=localhost;Initial Catalog=marpi-schedule;Integrated Security=True"
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "WorkerScheduleAPIFunction": {
+      "commandName": "Project",
+      "commandLineArgs": "host start --pause-on-error",
+      "environmentVariables": {
+        "jdbc_scheduleDB_connection": "Data Source=localhost;Initial Catalog=marpi-schedule;Integrated Security=True"
+      }
+    }
+  }
+}
