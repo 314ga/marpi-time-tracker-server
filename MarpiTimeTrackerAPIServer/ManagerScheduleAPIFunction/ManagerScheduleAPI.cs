@@ -16,8 +16,8 @@ namespace ManagerScheduleAPIFunction
     {
         [FunctionName("ManagerScheduleAPI")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "ManagerScheduleAPI/{request}/{workerID}/{param1}/{param2}/{param3}/{param4}/{param5}/{param6}/{param7}")] HttpRequest req,
-            string request, int workerID, string param1, string param2, string param3, string param4, string param5, string param6, string param7, ILogger log)
+            [HttpTrigger(AuthorizationLevel.Function, "get", "post", "put", "delete", Route = "ManagerScheduleAPI/{request}/{workerID}/{param1}/{param2}/{param3}/{param4}/{param5}/{param6}")] HttpRequest req,
+            string request, int workerID, string param1, string param2, string param3, string param4, string param5, string param6, ILogger log)
         {
 
             string responseMessage = "";
@@ -55,7 +55,7 @@ namespace ManagerScheduleAPIFunction
                             }
                         case "add-worker":
                             {
-                                text = "INSERT INTO workers VALUES(" + workerID + ",'"+param1+ "','" + param2 + "','" + param3 + "','" + param4 + "','" + param5 + "','" + param6 + "'," + param7 + ");";
+                                text = "INSERT INTO workers VALUES(" + workerID + ",'"+param1+ "','" + param2 + "','" + param3 + "','" + param4 + "','" + param5 + "','" + param6 + ");";
                                 break;
                             }
                         case "add-worker-to-schedule":

@@ -1,0 +1,153 @@
+﻿{
+  "$schema": "http://json.schemastore.org/proxies",
+  "proxies": {
+    "managerschedule.workerzone": {
+      "matchCondition": {
+        "methods": [ "GET" ],
+        "route": "/api/get-worker-zone/{workerID}"
+      },
+      "backendUri": "%manager_schedule_api%/get-worker-zone/{workerID}/null/null/null/null/null/null",
+      "debug": true
+    },
+    "managerschedule.schedule": {
+      "matchCondition": {
+        "methods": [ "GET" ],
+        "route": "/api/get-schedule/{starttime}/{endtime}"
+      },
+      "backendUri": "%manager_schedule_api%/get-schedule/null/{starttime}/{endtime}/null/null/null/null"
+
+    },
+    "managerschedule.addworker": {
+      "matchCondition": {
+        "methods": [ "POST" ],
+        "route": "/api/add-worker/{workerID}/{firstname}/{lastname}/{DOB}/{contract}/{team}/{CPR}"
+      },
+      "backendUri": "%manager_schedule_api%/add-worker/{workerID}/{firstname}/{lastname}/{DOB}/{contract}/{team}/{CPR}"
+
+    },
+    "managerschedule.addworkertoschedule": {
+      "matchCondition": {
+        "methods": [ "POST" ],
+        "route": "/api/add-worker-to-schedule/{workerID}/{date}/{scheduletype}"
+      },
+      "backendUri": "%manager_schedule_api%/add-worker-to-schedule/{workerID}/{date}/{scheduletype}/null/null/null/null"
+
+    },
+    "managerschedule.updatecontract": {
+      "matchCondition": {
+        "methods": [ "PUT" ],
+        "route": "/api/update-contract/{workerID}/{contract}"
+      },
+      "backendUri": "%manager_schedule_api%/update-contract/{workerID}/{contract}/null/null/null/null/null"
+
+    },
+    "managerschedule.updateworkerteam": {
+      "matchCondition": {
+        "methods": [ "PUT" ],
+        "route": "/api/update-workerteam/{workerID}/{team}"
+      },
+      "backendUri": "%manager_schedule_api%/update-workerteam/{workerID}/{team}/null/null/null/null/null"
+
+    },
+    "managerschedule.removeworkerzone": {
+      "matchCondition": {
+        "methods": [ "DELETE" ],
+        "route": "/api/remove-worker-zone/{workerID}/{zone}"
+      },
+      "backendUri": "%manager_schedule_api%/remove-worker-zone/{workerID}/{zone}/null/null/null/null/null"
+
+    },
+    "managerschedule.addworkerzone": {
+      "matchCondition": {
+        "methods": [ "POST" ],
+        "route": "/api/add-worker-zone/{workerID}/{zone}"
+      },
+      "backendUri": "%manager_schedule_api%/add-worker-zone/{workerID}/{zone}/null/null/null/null/null"
+
+    },
+    "managerschedule.workerschedule": {
+      "matchCondition": {
+        "methods": [ "GET" ],
+        "route": "/api/get-worker-schedule/{workerID}/{param1}/{param2}"
+      },
+      "backendUri": "%manager_schedule_api%/get-worker-schedule/{workerID}/{param1}/{param2}/null/null/null/null"
+    },
+    "workerschedule.schedule": {
+      "matchCondition": {
+        "methods": [ "GET" ],
+        "route": "/api/get-worker-schedule-worker/{workerID}/{startDate}/{endDate}"
+      },
+      "backendUri": "%worker_schedule_api%/get-worker-schedule/{workerID}/{startDate}/{endDate}"
+    },
+    "workerschedule.zone": {
+      "matchCondition": {
+        "methods": [ "GET" ],
+        "route": "/api/get-worker-zone-worker/{workerID}"
+      },
+      "backendUri": "%worker_schedule_api%/get-worker-zone/{workerID}/null/null"
+    },
+    "managertime.zone": {
+      "matchCondition": {
+        "methods": [ "PUT" ],
+        "route": "/api/fix-worker-zone/{workerID}/{date}/{workzone}/{starttime}/{endtime}/{oldstarttime}/{oldendtime}"
+      },
+      "backendUri": "%manager_time_api%/fix-worker-zone/{workerID}/{date}/{workzone}/{starttime}/{endtime}/{oldstarttime}/{oldendtime}"
+    },
+    "managertime.break": {
+      "matchCondition": {
+        "methods": [ "PUT" ],
+        "route": "/api/fix-break/{workerID}/{date}/{breakstart}/{breakend}/{oldbreakstart}/{oldbreakend}"
+      },
+      "backendUri": "%manager_time_api%/fix-break/{workerID}/{date}/{breakstart}/{breakend}/{oldbreakstart}/{oldbreakend}/null"
+    },
+    "managertime.day": {
+      "matchCondition": {
+        "methods": [ "PUT" ],
+        "route": "/api/fix-day/{workerID}/{endtime}/{oldstarttime}"
+      },
+      "backendUri": "%manager_time_api%/fix-day/{workerID}/{endtime}/{oldstarttime}/null/null/null/null"
+    },
+    "workertime.presentwork": {
+      "matchCondition": {
+        "methods": [ "POST" ],
+        "route": "/api/present-work/{workerID}/{date}"
+      },
+      "backendUri": "%worker_time_api%/present-work/{workerID}/{date}/null"
+    },
+    "workertime.punchworkzone": {
+      "matchCondition": {
+        "methods": [ "POST" ],
+        "route": "/api/punch-work-zone/{workerID}/{date}/{workzone}"
+      },
+      "backendUri": "%worker_time_api%/punch-work-zone/{workerID}/{date}/{workzone}"
+    },
+    "workertime.punchleavingwork": {
+      "matchCondition": {
+        "methods": [ "PUT" ],
+        "route": "/api/punch-leaving-work/{workerID}/{date}"
+      },
+      "backendUri": "%worker_time_api%/punch-leaving-work/{workerID}/{date}/null"
+    },
+    "workertime.punchbreak": {
+      "matchCondition": {
+        "methods": [ "PUT" ],
+        "route": "/api/punch-break/{workerID}/{date}"
+      },
+      "backendUri": "%worker_time_api%/punch-break/{workerID}/{date}/null"
+    },
+    "workertime.selectdaytime": {
+      "matchCondition": {
+        "methods": [ "GET" ],
+        "route": "/api/select-day-time/{workerID}/{date}"
+      },
+      "backendUri": "%worker_time_api%/select-day-time/{workerID}/{date}/null"
+    },
+    "workertime.selectmonthtime": {
+      "matchCondition": {
+        "methods": [ "GET" ],
+        "route": "/api/select-month-time/{workerID}/{month}/{year}"
+      },
+      "backendUri": "%worker_time_api%/select-month-time/{workerID}/{month}/{year}"
+    }
+  }
+}

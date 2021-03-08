@@ -44,7 +44,7 @@ namespace ManagerTimeAPIFunction
                             {
                                 text = "DECLARE @workday_ID AS int = (SELECT ID_work_day FROM workdays WHERE ID_worker = " + workerID + " AND date_present = '" + param1 + "') " +
                                        " UPDATE breaks SET break_start = '" + param2 + "', break_end = '" + param3 + "'" +
-                                       " WHERE ID_work_day = @workday_ID AND break_start = '" + param5 + "' AND break_end = '" + param6 + "';";
+                                       " WHERE ID_work_day = @workday_ID AND break_start = '" + param4 + "' AND break_end = '" + param5 + "';";
                                 break;
                             }
                         case "fix-day":

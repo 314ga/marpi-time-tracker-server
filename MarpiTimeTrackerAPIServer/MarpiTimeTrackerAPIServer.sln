@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkerScheduleAPIFunction",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManagerScheduleAPIFunction", "ManagerScheduleAPIFunction\ManagerScheduleAPIFunction.csproj", "{D3888C57-DDA5-4C7C-B77E-6424B55B5E3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerTimeAPIFunction", "WorkerTimeAPIFunction\WorkerTimeAPIFunction.csproj", "{E96EDEED-2D26-45A4-A41F-B7B9F8D5137C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkerTimeAPIFunction", "WorkerTimeAPIFunction\WorkerTimeAPIFunction.csproj", "{E96EDEED-2D26-45A4-A41F-B7B9F8D5137C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagerTimeAPIFunction", "ManagerTimeAPIFunction\ManagerTimeAPIFunction.csproj", "{10146D62-5D57-4760-8425-72525DF54DA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManagerTimeAPIFunction", "ManagerTimeAPIFunction\ManagerTimeAPIFunction.csproj", "{10146D62-5D57-4760-8425-72525DF54DA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxyApp", "ProxyApp\ProxyApp.csproj", "{50DD03F6-0222-4455-AD6F-C3F0F205EFCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{10146D62-5D57-4760-8425-72525DF54DA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10146D62-5D57-4760-8425-72525DF54DA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10146D62-5D57-4760-8425-72525DF54DA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50DD03F6-0222-4455-AD6F-C3F0F205EFCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50DD03F6-0222-4455-AD6F-C3F0F205EFCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50DD03F6-0222-4455-AD6F-C3F0F205EFCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50DD03F6-0222-4455-AD6F-C3F0F205EFCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
