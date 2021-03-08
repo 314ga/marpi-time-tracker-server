@@ -1,0 +1,12 @@
+{
+  "ConnectionStrings": {},
+  "IsEncrypted": false,
+  "Values": {
+    "AZURE_FUNCTION_PROXY_DISABLE_LOCAL_CALL": true,
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "manager_schedule_api": "http://localhost:7071/api/ManagerScheduleAPI",
+    "worker_schedule_api": "http://localhost:5860/api/WorkerScheduleAPI",
+    "manager_time_api": "http://localhost:5880/api/ManagerTimeAPI",
+    "worker_time_api": "http://localhost:7074/api/WorkerTimeAPI"
+  }
+}
