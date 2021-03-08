@@ -16,8 +16,8 @@ namespace ManagerScheduleAPIFunction
     {
         [FunctionName("ManagerScheduleAPI")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "ManagerScheduleAPI/{request}/{workerID}/{param1}/{param2}")] HttpRequest req,
-            string request, int workerID, string param1, string param2, ILogger log)
+            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "ManagerScheduleAPI/{request}/{workerID}/{param1}/{param2}/{param3}/{param4}/{param5}/{param6}/{param7}")] HttpRequest req,
+            string request, int workerID, string param1, string param2, string param3, string param4, string param5, string param6, string param7, ILogger log)
         {
 
             string responseMessage = "";
@@ -51,6 +51,11 @@ namespace ManagerScheduleAPIFunction
                                 text = "SELECT schedule.time_start, schedule.time_end, workerstates.worker_state FROM schedule "+
                                        "INNER JOIN workerstates ON workerstates.ID_worker_state = schedule.ID_worker_state AND "+
                                        " schedule.time_start >= '" + param1 + "' AND schedule.time_start <= '" + param2 + "' FOR JSON PATH;";
+                                break;
+                            }
+                        case "add-worker":
+                            {
+                                text = "INSERT INTO workers VALUES(" + workerID + ",'"+param1+ "','" + param2 + "','" + param3 + "','" + param4 + "','" + param5 + "','" + param6 + "'," + param7 + ");";
                                 break;
                             }
                         case "add-worker-to-schedule":

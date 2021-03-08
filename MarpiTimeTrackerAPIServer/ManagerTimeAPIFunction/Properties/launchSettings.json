@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "ManagerTimeAPIFunction": {
+      "commandName": "Project",
+      "commandLineArgs": "host start --pause-on-error --port 5880",
+      "environmentVariables": {
+        "jdbc_timeDB_connection": "Data Source=localhost;Initial Catalog=marpi-timetracker;Integrated Security=True"
+      }
+    }
+  }
+}
